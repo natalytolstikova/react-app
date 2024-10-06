@@ -1,0 +1,11 @@
+@use '../../styles/colors' as *;
+
+.container {
+  display: flex;
+  background-color: $sea-gray;
+
+  height: 10vh;
+
+  margin-top: auto;
+  margin-bottom: 0;
+}

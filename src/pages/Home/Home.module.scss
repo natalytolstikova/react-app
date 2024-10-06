@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  min-height: 100vh;
+  background-color: #69777f;
+
+  justify-content: space-between;
+}
+
+h1 {
+  color: #ffff;
+}
