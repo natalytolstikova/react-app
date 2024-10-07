@@ -4,17 +4,20 @@ import styles from './List.module.scss';
 
 interface ListT {
   data: Data[];
+  onDelete: (k: number) => void;
 }
 
-const List: FC<ListT> = ({ data }) => {
+const List: FC<ListT> = ({ data, onDelete }) => {
   const [open, setOpen] = useState(false);
   const [openedId, setOpenedId] = useState(0);
 
   const toggleCard = (k: number) => {
-    // if (!open) {
     setOpen(!open);
     setOpenedId(k);
-    /*     } */
+  };
+
+  const deleteItem = (k: number) => {
+    onDelete(k);
   };
 
   console.log('open');
@@ -44,27 +47,50 @@ const List: FC<ListT> = ({ data }) => {
               <div className={styles.date}>{item?.created_at}</div>
             </div>
 
-            <div className={styles.buttonsContainer}>
-              <div className={styles.column1}>
-                <div
-                  onClick={() => console.log('delete')}
-                  className={styles.deleteButton}
-                >
-                  Delete !
+            {openedId == k && open && (
+              <div className={styles.buttonsContainer}>
+                <div className={styles.column1}>
+                  <div
+                    onClick={() => deleteItem(k)}
+                    className={styles.deleteButton}
+                  >
+                    Delete
+                  </div>
+                  <div className={styles.deleteButton}>Delete</div>
                 </div>
-                <div className={styles.deleteButton}>Delete</div>
-              </div>
 
-              <div className={styles.column2}>
-                <div className={styles.deleteButton}>Delete</div>
-                <div className={styles.deleteButton}>Delete</div>
-                <div className={styles.deleteButton}>Delete</div>
-              </div>
+                <div className={styles.column2}>
+                  <div
+                    className={styles.deleteButton}
+                    onClick={() => deleteItem(k)}
+                  >
+                    Delete
+                  </div>
 
-              <div className={styles.column3}>
-                <div className={styles.deleteButton}>Delete</div>
+                  <div
+                    className={styles.deleteButton}
+                    onClick={() => deleteItem(k)}
+                  >
+                    Delete
+                  </div>
+                  <div
+                    className={styles.deleteButton}
+                    onClick={() => deleteItem(k)}
+                  >
+                    Delete
+                  </div>
+                </div>
+
+                <div className={styles.column3}>
+                  <div
+                    className={styles.deleteButton}
+                    onClick={() => deleteItem(k)}
+                  >
+                    Delete
+                  </div>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </li>

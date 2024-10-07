@@ -7,16 +7,18 @@ interface PaginationListT {
   data: Data[];
   onNext: () => void;
   onPrev: () => void;
+  onDelete: (k: number) => void;
 }
 
 const PaginationList: FC<PaginationListT> = memo(function PaginationList({
   data,
   onNext,
   onPrev,
+  onDelete,
 }: PaginationListT) {
   return (
     <div className={styles.container}>
-      <List data={data} />
+      <List data={data} onDelete={onDelete} />
 
       <div className={styles.pagination}>
         <div className={styles.button} onClick={onPrev}>

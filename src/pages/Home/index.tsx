@@ -36,12 +36,25 @@ const Home: FC = memo(function Home() {
   const nextPage = () => page < nPages - 1 && setPage(page + 1);
   const prevPage = () => page > 0 && setPage(page - 1);
 
+  const onDelete = (k: number) => {
+    console.log('ondelete');
+    const newData = data.filter((v, n) => n != k);
+    console.log(newData);
+    setData(newData);
+  };
+
   return (
     <div className={styles.wrapper}>
       <Menu />
       <div className={styles.container}>
         <Header />
-        <PaginationList data={data} onNext={nextPage} onPrev={prevPage} />
+        <PaginationList
+          data={data}
+          onNext={nextPage}
+          onPrev={prevPage}
+          onDelete={onDelete}
+        />
+
         <Footer />
       </div>
     </div>
