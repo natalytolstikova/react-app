@@ -11,4 +11,21 @@
 
   padding-left: 5vw;
   padding-right: 5vw;
+
+  align-content: center;
+  justify-content: center;
+}
+
+.helpButton {
+  width: 240px;
+  height: 20px;
+  background-color: $gray;
+  text-align: center;
+  cursor: pointer;
+  align-self: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
