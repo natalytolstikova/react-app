@@ -1,6 +1,7 @@
 import React, { FC, memo } from 'react';
 import List from '../List';
 import { Data } from '../../types/Data';
+import styles from './PaginationList.module.scss';
 
 interface PaginationListT {
   data: Data[];
@@ -14,7 +15,7 @@ const PaginationList: FC<PaginationListT> = memo(function PaginationList({
   onPrev,
 }: PaginationListT) {
   return (
-    <div>
+    <div className={styles.container}>
       <List data={data} />
 
       <div onClick={onPrev}>-- PREV --</div>

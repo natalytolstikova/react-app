@@ -1,15 +1,16 @@
 import React, { FC } from 'react';
 import styles from './Header.module.scss';
-import Button from '../Button';
 
 const Header: FC = () => {
   return (
     <header>
       <div className={styles.container}>
-        <Button
-          title="Header button"
+        <div
+          className={styles.headerButton}
           onClick={() => console.log('header button clicked')}
-        />
+        >
+          Header button
+        </div>
       </div>
     </header>
   );
