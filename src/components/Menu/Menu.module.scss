@@ -1,0 +1,33 @@
+@use '../../styles/colors' as *;
+
+.container {
+  background-color: $purple-gray;
+  display: flex;
+  width: 20rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main {
+  background-color: $sea-gray;
+  width: 15rem;
+  height: 40rem;
+  justify-content: center;
+  display: flex;
+  margin-top: 10rem;
+  align-self: center;
+}
+
+.text {
+  align-self: center;
+}
+
+.logoutButton {
+  width: 240px;
+  height: 20px;
+  background-color: $gray;
+  text-align: center;
+  cursor: pointer;
+  align-self: center;
+  margin-bottom: 60px;
+}
