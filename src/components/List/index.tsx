@@ -11,8 +11,10 @@ const List: FC<ListT> = ({ data }) => {
   const [openedId, setOpenedId] = useState(0);
 
   const toggleCard = (k: number) => {
+    // if (!open) {
     setOpen(!open);
     setOpenedId(k);
+    /*     } */
   };
 
   console.log('open');
@@ -27,19 +29,43 @@ const List: FC<ListT> = ({ data }) => {
         onClick={() => toggleCard(k)}
         key={k}
       >
-        <div className={styles.points}>{item?.points}</div>
+        <div className={styles.row}>
+          <div className={styles.points}>{item?.points}</div>
 
-        <div className={styles.dateNameContainer}>
-          <div className={styles.subjectContainer}>
-            <div className={styles.subjectWrapper}>
-              <div className={styles.subject}>{item?.author}</div>
+          <div className={styles.column}>
+            <div className={styles.dateNameContainer}>
+              <div className={styles.subjectContainer}>
+                <div className={styles.subject}>{item?.author}</div>
+
+                <div className={styles.subjectWrapper}>
+                  <div className={styles.subject}>{item?.title}</div>
+                </div>
+              </div>
+              <div className={styles.date}>{item?.created_at}</div>
             </div>
 
-            <div className={styles.subjectWrapper}>
-              <div className={styles.subject}>{item?.title}</div>
+            <div className={styles.buttonsContainer}>
+              <div className={styles.column1}>
+                <div
+                  onClick={() => console.log('delete')}
+                  className={styles.deleteButton}
+                >
+                  Delete !
+                </div>
+                <div className={styles.deleteButton}>Delete</div>
+              </div>
+
+              <div className={styles.column2}>
+                <div className={styles.deleteButton}>Delete</div>
+                <div className={styles.deleteButton}>Delete</div>
+                <div className={styles.deleteButton}>Delete</div>
+              </div>
+
+              <div className={styles.column3}>
+                <div className={styles.deleteButton}>Delete</div>
+              </div>
             </div>
           </div>
-          <div className={styles.date}>{item?.created_at}</div>
         </div>
       </li>
     );

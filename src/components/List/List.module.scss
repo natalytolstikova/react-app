@@ -5,36 +5,38 @@
   margin-top: 14px;
   margin-bottom: 14px;
   list-style-type: none;
-
   padding: 20px;
-
-  padding-bottom: 40px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   border-radius: 10px;
   cursor: pointer;
+  max-width: 50vw;
+  min-width: 40vw;
 }
 
 .openedListItem {
   height: 200px;
   transition: width 0.3s ease-in 0.4s;
-
   background-color: $gray;
   margin-top: 14px;
   margin-bottom: 14px;
   list-style-type: none;
-
   padding: 20px;
-
-  padding-bottom: 40px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   border-radius: 10px;
   cursor: pointer;
+  max-width: 50vw;
+  min-width: 40vw;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+
+.deleteButton {
+  background-color: $blue;
+  border-radius: 4px;
+  color: $white;
+  padding: 5px;
 }
 
 .points {
@@ -46,18 +48,15 @@
   margin-right: 20px;
   height: 18px;
   border-radius: 8px;
+  display: flex;
+  flex: 0.1;
+  justify-content: center;
 }
 
 .subject {
   background-color: $white;
   padding: 5px;
   border-radius: 8px;
-  position: absolute;
-}
-
-.subjectWrapper {
-  position: relative;
-  padding-bottom: 30px;
 }
 
 .date {
@@ -65,20 +64,57 @@
   color: $white;
   padding: 5px;
   text-align: center;
-  height: 18px;
+  height: 3vh;
   border-radius: 8px;
+  display: flex;
+  flex: 0.3;
+  font-size: 0.8rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .subjectContainer {
   display: flex;
-  flex: 1;
   flex-direction: column;
   padding-right: 20px;
   gap: 10px;
+  flex: 0.7;
 }
 
 .dateNameContainer {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   flex: 1;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 0.9;
+}
+
+.buttonsContainer {
+  display: flex;
+  padding-top: 20px;
+  justify-content: space-between;
+}
+
+.column1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.column2 {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.column3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
