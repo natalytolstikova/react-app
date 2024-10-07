@@ -29,17 +29,12 @@ const Home: FC = memo(function Home() {
     fechData();
   }, [page]);
 
-  console.log('render');
-
-  console.log(page);
-
   const nextPage = () => page < nPages - 1 && setPage(page + 1);
   const prevPage = () => page > 0 && setPage(page - 1);
 
   const onDelete = (k: number) => {
-    console.log('ondelete');
+    console.log('delete');
     const newData = data.filter((v, n) => n != k);
-    console.log(newData);
     setData(newData);
   };
 

@@ -20,9 +20,6 @@ const List: FC<ListT> = ({ data, onDelete }) => {
     onDelete(k);
   };
 
-  console.log('open');
-  console.log(open);
-
   const listItems = data?.map((item, k) => {
     return (
       <li
