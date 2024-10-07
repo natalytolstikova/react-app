@@ -18,9 +18,14 @@ const PaginationList: FC<PaginationListT> = memo(function PaginationList({
     <div className={styles.container}>
       <List data={data} />
 
-      <div onClick={onPrev}>-- PREV --</div>
-
-      <div onClick={onNext}>-- NEXT --</div>
+      <div className={styles.pagination}>
+        <div className={styles.button} onClick={onPrev}>
+          ⬅️ previous page
+        </div>
+        <div className={styles.button} onClick={onNext}>
+          next page ➡️
+        </div>
+      </div>
     </div>
   );
 });

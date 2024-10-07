@@ -3,3 +3,15 @@
   margin-right: 5vw;
   margin-top: 2vh;
 }
+
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+
+.button {
+  cursor: pointer;
+}

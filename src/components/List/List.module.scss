@@ -11,29 +11,33 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-radius: 10px;
 }
 
 .points {
   background-color: $green;
   color: $white;
-  padding: 4px;
+  padding: 5px;
   text-align: center;
   width: 40px;
   margin-right: 20px;
   height: 18px;
+  border-radius: 8px;
 }
 
 .subject {
   background-color: $white;
-  padding: 4px;
+  padding: 5px;
+  border-radius: 8px;
 }
 
 .date {
   background-color: $violet;
   color: $white;
-  padding: 4px;
+  padding: 5px;
   text-align: center;
   height: 18px;
+  border-radius: 8px;
 }
 
 .subjectContainer {
