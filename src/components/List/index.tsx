@@ -1,10 +1,5 @@
 import React, { FC } from 'react';
-
-interface Data {
-  name: string;
-  subject: string;
-  status: string;
-}
+import { Data } from '../../types/Data';
 
 interface ListT {
   data: Data[];
@@ -14,9 +9,10 @@ const List: FC<ListT> = ({ data }) => {
   const listItems = data?.map((item, k) => {
     return (
       <li key={k}>
-        <div>{item?.name}</div>
-        <div>{item?.subject}</div>
-        <div>{item?.status}</div>
+        <div>{item?.author}</div>
+        <div>{item?.title}</div>
+        <div>{item?.points}</div>
+        <div>{item?.data}</div>
       </li>
     );
   });
