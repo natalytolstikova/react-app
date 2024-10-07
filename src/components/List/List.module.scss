@@ -6,12 +6,35 @@
   margin-bottom: 14px;
   list-style-type: none;
 
-  padding: 14px;
+  padding: 20px;
+
+  padding-bottom: 40px;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.openedListItem {
+  height: 200px;
+  transition: width 0.3s ease-in 0.4s;
+
+  background-color: $gray;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  list-style-type: none;
+
+  padding: 20px;
+
+  padding-bottom: 40px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
 .points {
@@ -29,6 +52,12 @@
   background-color: $white;
   padding: 5px;
   border-radius: 8px;
+  position: absolute;
+}
+
+.subjectWrapper {
+  position: relative;
+  padding-bottom: 30px;
 }
 
 .date {
